@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType8.html</title>
+</head>
+<body>
+    <h1>javascript data type</h1>
+    <script>
+        /*
+            함수를 호출하는 목적 
+
+            1. 어떤 동작을 하기 위해
+            2. 어떤 값을 받아오기 위해
+        */
+
+        console.log("javascript 가 로딩 중 입니다.");
+
+        //원숭이를 냉장고에 밀어 넣는 함수
+        let pushMonkey=function(){
+            console.log("냉장고 문을 열어요");
+            console.log("원숭이를 넣어요");
+            console.log("냉장고 문을 닫아요");
+        };
+
+        let getFortune=function(){
+            //어떤 복잡한 과정을 통해서 오늘의 운세를 얻어왔다고 가정하자
+            let fortune="동쪽으로 가면 귀인을 만나요";
+            //return 이라는 예약어를 이용해서 string type 데이터를 함수를 호출한 그 위치로 되돌려 준다.
+            return fortune;
+        };
+
+        //원숭이를 냉장고에 넣기 
+        pushMonkey();
+
+        //오늘의 운세를 받아와서 fortuneToday 라는 변수에 담기
+        let fortuneToday=getFortune();
+
+        console.log("javascript 가 로딩이 종료 됩니다.");
+    </script>
+</body>
+</html>

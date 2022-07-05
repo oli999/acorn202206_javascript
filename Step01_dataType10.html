@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType10.html</title>
+</head>
+<body>
+    <h1>javascript data type</h1>
+    <script>
+        /*
+            function(msg){ }
+            에서 msg 는 매개 변수이다.
+            함수에 전달되는 값을 전달 받을 변수이며
+            let 을 선언하지 않는다.
+            매개 변수는 해당 함수 안에서만 사용할수 있다. 
+        */
+
+        //변수를 선언만 하고 어떤 값도 넣지 않으면 undefined 가 들어 있다. 
+        let myName;
+
+        let str="안녕하세요";
+
+        let printMsg=function(msg){
+            console.log("-----------");
+            console.log(msg);
+            console.log("-----------");
+        };
+
+        //함수 호출하면서 string type 데이터를 즉석에서 만들어서 전달하기
+        printMsg("hello");
+        //함수 호출하면서 string type 데이터가 들어있는 변수명을 이용해서 값 전달하기
+        printMsg(str);
+
+        //printMsg("str");
+
+        //두개의 매개변수를 갖는 함수 
+        function printSum(num1, num2){
+            //두수의 합을 구해서 
+            let result=num1+num2;
+            //문자열 정보를 구성하고 
+            let info=num1+" 과 "+num2+" 의 합은 "+result+" 입니다.";
+            //구성된 문자열을 콘솔창에 출력하기 
+            console.log(info);
+        }
+        //함수 호출하면서 number type 데이터를 즉석에서 만들어서 전달하기 
+        printSum(10, 20);
+        
+        let a=100;
+        let b=50;
+        //함수 호출하면서 number type 데이터가 들어 있는 변수명으로 값 전달하기 
+        printSum(a, b);
+    </script>
+</body>
+</html>

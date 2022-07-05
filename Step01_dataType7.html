@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType7.html</title>
+</head>
+<body>
+    <h1>javascript data type</h1>
+    <script>
+
+        //f1(); //아직 안만들어 졌기 때문에 호출 불가
+        f2(); //최우선적으로 만들어 졌기 때문에 호출가능 
+
+        //이름이 없는 함수를 만들고 그 함수의 참조값을 f1 이라는 변수에 대입하기 
+        let f1=function(){
+            console.log("f1() 함수 호출됨");
+        };
+
+        //f2라는 이름의 함수 만들기
+        function f2(){
+            console.log("f2() 함수 호출됨");
+        }
+
+        /*  
+            [ 새로 추가된 문법 ]
+
+            function(){} 을 줄여서 ()=>{} 처럼 작성할 수 있다.
+        */
+        let f3=()=>{
+            console.log("f3() 함수 호출됨");
+        };
+    </script>
+</body>
+</html>
