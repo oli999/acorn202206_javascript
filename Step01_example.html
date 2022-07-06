@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_example.html</title>
+</head>
+<body>
+    <p>p1 입니다.</p>
+    <p id="one" class="my-class">p2 입니다.</p>
+    <p id="two" class="my-class">p3 입니다.</p>
+    <p class="my-class">p4 입니다.</p>
+    <p>p5 입니다.</p>
+    <button onclick="change()">바꾸기</button>
+    <script>
+
+        document.querySelectorAll("p")[0].innerText="김구라";
+        /* 
+            바꾸기 버튼을 누르면 id 가 one 인 요소의 innerText 를 
+            "해골" 로 바뀌도록 프로그래밍 해 보세요.
+        */
+        //document.querySelector("#one").innerText="해골";
+
+        function change(){
+            document.querySelector("#one").innerText="해골";
+        }
+    </script>
+</body>
+</html>

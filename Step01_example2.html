@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_example2.html</title>
+</head>
+<body>
+    <input type="text" id="one">
+    <button onclick="send()">전송</button>
+    <button onclick="clearAll()">삭제</button>
+    <p id="two"></p>
+    <script>
+        /*  
+            위의 input 요소에 문자열을 입력하고 전송 버튼을 눌렀을때
+            
+            1. input 요소에 입력한 value 값을  msg 라는 이름의 변수에 담은 다음
+            2. id 가 two 인 p 요소의 innerText 에 대입해 보세요. 
+        */
+        
+        function send(){
+            let msg=document.querySelector("#one").value;
+            document.querySelector("#two").innerText=msg;
+        }
+
+        /*
+            삭제 버튼을 눌렀을때 input 요소의 value 와
+            p 요소의 innerText 가 제거 되도록 해 보세요.
+            
+            hint)  document.querySelector("#one").value="";
+        */
+        
+        function clearAll(){
+            document.querySelector("#one").value="";
+            document.querySelector("#two").innerText="";
+        }
+    </script>
+</body>
+</html>
