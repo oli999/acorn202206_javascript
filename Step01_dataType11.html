@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType11.html</title>
+</head>
+<body>
+    <h1>javascript data type</h1>
+    <button onclick="remove()">삭제</button>
+    <button onclick="input()">입력 받기</button>
+    <button onclick="print()">입력 받은 내용 출력하기</button>
+    <script>
+
+        function remove(){
+            //삭제 여부를 입력받아서 지역변수 isDelete 에 담는다.
+            let isDelete=confirm("삭제 할까요?");
+            //만일 삭제할거라면 (isDelete 에 true 가 들어 있다면)
+            if(isDelete){
+                //삭제하는 작업하기
+                console.log("삭제 합니다.");
+            }
+        }
+
+        //페이지 로딩 시점에 global 영역에 변수를 만들어 놓는다. 
+        let msg;
+
+        function input(){
+            //global 영역에 만들어진 변수에 입력한 문자열을 저장한다.
+            msg=prompt("메세지를 입력하세요");
+        }
+
+        function print(){
+            //global 영역에 만들어진 변수에 있는 값을 참조해서 작업을 한다.
+            console.log(msg);
+        }
+        
+    </script>
+</body>
+</html>
