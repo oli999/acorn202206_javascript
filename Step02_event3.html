@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_event3.html</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="myDiv"></div>
+    <script>
+        //1. 위의 div 에 "mousedown" 이벤트가 일어나면 div 의 배경색을 노란색으로 바꿔 보세요.
+        // hint :  .style.backgroundColor="색상";
+        document.querySelector("#myDiv").addEventListener("mousedown", function(){
+            document.querySelector("#myDiv").style.backgroundColor="yellow";
+        });
+
+        //2. 위의 div 에 "mouseup" 이벤트가 일어나면 div 의 배경색을 흰색으로 바꿔 보세요.
+        document.querySelector("#myDiv").addEventListener("mouseup", function(){
+            document.querySelector("#myDiv").style.backgroundColor="white";
+        });
+
+        //3. 위의 div 에 "mousemove" 이벤트가 일어 날때 마다 해당 마우스의 좌표를 
+        //   div 의 innerText 로 출력하도록 해 보세요.
+        //  출력형식=>   x좌표: 100, y좌표: 200 
+        //  구글 검색 키워드 => addEventListener  mousemove  x y  
+        document.querySelector("#myDiv").addEventListener("mousemove", function(e){
+            console.log("mousemove!");
+            console.log(e);
+            //출력할 정보 구성하기
+            let info="x좌표: "+e.offsetX+", y좌표:"+e.offsetY;
+            //div 의 innerText 로 출력하기
+            document.querySelector("#myDiv").innerText=info;
+        });
+
+        // 2 개의 매개변수가 선언된 함수 
+        function callMe(eventName, callback){
+            console.log("이벤트명:"+eventName);
+            //callback 함수를 호출하면서 전달할 object
+            let obj={num:1, name:"김구라"};
+            //callback 에 전달된 data type 은 함수이므로 호출할수 있다.
+            callback(obj);
+        }
+
+        callMe("배고파", function(a){
+            alert(a.name);
+        });
+    </script>
+</body>
+</html>

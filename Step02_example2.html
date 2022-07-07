@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example2.html</title>
+    <style>
+        #kimImg{
+            transition: all 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <button id="moveRightBtn">우측으로 움직이기</button>
+    <button id="moveLeftBtn">왼쪽으로 움직이기</button>
+    <button id="moveRightBottomBtn">우하단 으로 움직이기</button>
+    <button id="resetBtn">초기화</button>
+    <br>
+    <img src="images/kim1.png" id="kimImg">
+    <script>
+        /*
+            아래의 mLeft 변수를 활용해서 
+            움직이기 버튼을 누를때 마다 김구라 이미지의 왼쪽 마진을 10px 씩 증가 시켜서
+            이미지가 우측으로 100px 씩 움직이도록 프로그래밍 해 보세요.
+            
+            hint)
+            .style.marginLeft = mLeft+"px";
+
+        */
+
+        //local 영역에서 공통으로 사용할 지역변수를 만들고 초기값 0 대입
+        let mLeft=0;
+        let mTop=0;
+
+        document.querySelector("#moveRightBottomBtn").addEventListener("click", function(){
+            //변수에 있는 숫자를 100씩 증가 시키고 
+            mLeft = mLeft+100;
+            mTop = mTop+100;
+            //변수에 있는 숫자를 이미지의 왼쪽 마진에 적용한다.
+            document.querySelector("#kimImg").style.marginLeft = mLeft+"px";
+            //변수에 있는 숫자를 이미지의 위쪽 마진에 적용한다.
+            document.querySelector("#kimImg").style.marginTop = mTop+"px";
+        });
+
+
+        document.querySelector("#moveRightBtn").addEventListener("click", function(){
+            //변수에 있는 숫자를 100씩 증가 시키고 
+            mLeft = mLeft+100;
+            //변수에 있는 숫자를 이미지의 왼쪽 마진에 적용한다.
+            document.querySelector("#kimImg").style.marginLeft = mLeft+"px";
+        });
+
+        document.querySelector("#moveLeftBtn").addEventListener("click", function(){
+            if(mLeft != 0){
+                //변수에 있는 숫자를 100씩 감소 시키고 
+                mLeft = mLeft-100;
+                //변수에 있는 숫자를 이미지의 왼쪽 마진에 적용한다.
+                document.querySelector("#kimImg").style.marginLeft = mLeft+"px";
+            }
+            
+        });
+
+        document.querySelector("#resetBtn").addEventListener("click", function(){
+            mLeft = 0;
+            mTop = 0;
+            document.querySelector("#kimImg").style.marginLeft = mLeft+"px";
+            document.querySelector("#kimImg").style.marginTop = mTop+"px";
+        });
+    </script>
+</body>
+</html>
