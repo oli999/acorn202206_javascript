@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example4.html</title>
+</head>
+<body>
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+    <div>div6</div>
+    <div>div7</div>
+    <div>div8</div>
+    <div>div9</div>
+    <div>div10</div>
+    <button id="changeBtn">바꾸기</button>
+    <button id="changeBtn2">바꾸기2</button>
+    <button id="changeBtn3">바꾸기3</button>
+    <script>
+        //페이지 로딩 시점에 index 변수를 만들고 초기값 0 를 대입
+        let index=0;
+
+        document.querySelector("#changeBtn").addEventListener("click", function(){ 
+            //만일 index 가 10 보다 작으면 if 문 { } 안에 있는 내용을 실행하고
+            //그렇지 않으면(10 이상이면) 건너띤다   
+            if(index < 10){
+                let divs=document.querySelectorAll("div");
+                //배열의 특정 인덱스에 들어 있는 div 요소의 innerText 를 변화 시키기 
+                divs[index].innerText="김구라";
+                //index 값을 1 증가 시킨다.
+                index = index+1;
+            }
+        });
+
+        document.querySelector("#changeBtn2").addEventListener("click", function(){ 
+            //만일 index 가 10 이면
+            if(index == 10){
+                //함수를 여기서 끝내라(종료)
+                return;
+            }
+            let divs=document.querySelectorAll("div");
+            //배열의 특정 인덱스에 들어 있는 div 요소의 innerText 를 변화 시키기 
+            divs[index].innerText="김구라";
+            //index 값을 1 증가 시킨다.
+            index = index+1;
+        });
+
+        document.querySelector("#changeBtn3").addEventListener("click", function(){ 
+            let divs=document.querySelectorAll("div");
+            //만일 index 가 10 이면
+            if(index == divs.length ){
+                //함수를 여기서 끝내라(종료)
+                return;
+            }
+            //배열의 특정 인덱스에 들어 있는 div 요소의 innerText 를 변화 시키기 
+            divs[index].innerText="김구라";
+            //index 값을 1 증가 시킨다.
+            index = index+1;
+        });
+
+    </script>
+</body>
+</html>
