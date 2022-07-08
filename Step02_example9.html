@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example9.html</title>
+</head>
+<body>
+    <button id="myBtn">눌러보셈</button>
+    <p id="result"></p>
+
+    <button id="myBtn2">눌러보셈2</button>
+    <p id="result2"></p>
+
+    <script>
+        /*
+            눌러보셈2 버튼을 눌렀을때  "가위" or "바위" or "보"  중의 하나의 문자열을
+            랜덤하게 <p id="result2"></p> 요소의 innerText 로 출력해 보세요.
+            - hint
+            let data=["가위", "바위", "보"];
+        */
+        document.querySelector("#myBtn2").addEventListener("click", function(){
+            let data=["가위", "바위", "보"];
+            // 0~2 사이의 랜덤한 정수를 얻어낸다. 
+            let ranNum=Math.floor(Math.random()*3);
+            // data 배열에서 ranNum 의 인덱스에 해당하는 문자열을 p 요소의 innerText 로 출력하기 
+            document.querySelector("#result2").innerText=data[ranNum];
+        });
+
+
+        /*
+            버튼을 눌렀을때 0 또는 1 또는 2 의 숫자를 랜덤하게 얻어내서 
+            얻어낸 숫자를 p 요소의 innerText 로 출력해 보세요.
+        */
+        document.querySelector("#myBtn").addEventListener("click", function(){
+            // 0~2 사이의 랜덤한 정수를 얻어낸다. 
+            let ranNum=Math.floor(Math.random()*3);
+            //p 요소의 innerText 로 출력하기
+            document.querySelector("#result").innerText=ranNum;
+        });
+
+
+    </script>
+</body>
+</html>

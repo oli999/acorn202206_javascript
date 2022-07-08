@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Step02_example8.html</title>
     <style>
         .kim{
             width: 100px;
@@ -31,11 +31,23 @@
 
         let imgs=document.querySelectorAll(".kim");
 
+        //이미지가 확대된 상태인지 여부를 저장하는 배열
+        let isLarges=[false, false, false, false, false];
+
         //반복문 돌면서 모든 img 요소에 click 이벤트 리스너 등록하기
         for(let i=0; i<imgs.length; i++){
             imgs[i].addEventListener("click", function(){
-                imgs[i].style.width="150px";
-                imgs[i].style.height="150px";
+                if(isLarges[i] == false){
+                    imgs[i].style.width="150px";
+                    imgs[i].style.height="150px";
+                    //확대된 상태이기 때문에 상태값을 바꿔준다.
+                    isLarges[i]=true;
+                }else{
+                    imgs[i].style.width="100px";
+                    imgs[i].style.height="100px";
+                    //축소된 상태이기 때문에 상태값을 바꿔준다.
+                    isLarges[i]=false;
+                }
             });
         }
     </script>
