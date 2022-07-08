@@ -28,6 +28,7 @@
     <div>div19</div>
     <div>div20</div>
     <button id="changeBtn">바꾸기</button>
+    <button id="changeBtn2">바꾸기2</button>
     <script>
         /*
             바꾸기 버튼을 눌렀을때 모든 div(20개) 의 innerText 를 "김구라" 로 변경되는 
@@ -40,8 +41,18 @@
             .
         */
         document.querySelector("#changeBtn").addEventListener("click", function(){
+            for(let i=0; i<20; i++){
+                document.querySelectorAll("div")[i].innerText="김구라";
+            }
+        });
 
-            //document.querySelectorAll("div")[num].innerText="김구라";
+        document.querySelector("#changeBtn2").addEventListener("click", function(){
+            //요소명이 div 인 모든 문서객체의 참조값을 배열로 얻어낸다.
+            let divs=document.querySelectorAll("div");
+
+            for(let i=0; i<divs.length; i++){
+                divs[i].innerText="김구라";
+            }
 
         });
 
