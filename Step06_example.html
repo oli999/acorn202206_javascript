@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step06_example.html</title>
+</head>
+<body>
+    <h1>동적으로 문서객체 만드는 연습</h1>
+    <input type="text" id="inputName" placeholder="이름 입력...">
+    <input type="text" id="inputAddr" placeholder="주소 입력...">
+    <button id="addBtn">추가</button>
+    <button id="addBtn2">추가</button>
+    <button id="addBtn3">추가</button>
+    <h2>목록입니다</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>김구라</td>
+                <td>노량진</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+
+        //추가 버튼을 눌렀을때 실행할 함수 등록
+        document.querySelector("#addBtn").addEventListener("click", function(){
+            //입력한 내용을 읽어온다.
+            let name=document.querySelector("#inputName").value;
+            let addr=document.querySelector("#inputAddr").value;
+
+            let str="<tr><td>"+name+"</td><td>"+addr+"</td></tr>";
+            document.querySelector("tbody").insertAdjacentHTML("beforeend", str);
+        });
+
+        //추가 버튼을 눌렀을때 실행할 함수 등록
+        document.querySelector("#addBtn2").addEventListener("click", function(){
+            //입력한 내용을 읽어온다.
+            let name=document.querySelector("#inputName").value;
+            let addr=document.querySelector("#inputAddr").value;
+
+            let str=`
+                <tr>
+                    <td>${name}</td>
+                    <td>${addr}</td>
+                <tr>
+            `;
+            
+            document.querySelector("tbody").insertAdjacentHTML("beforeend", str);
+        });
+
+        //추가 버튼을 눌렀을때 실행할 함수 등록
+        document.querySelector("#addBtn3").addEventListener("click", function(){
+            //입력한 내용을 읽어온다.
+            let name=document.querySelector("#inputName").value;
+            let addr=document.querySelector("#inputAddr").value;
+
+            //td라는 요소를 2개 만들어서 td1, td2에 그 요소의 참조값을 담는다
+            let td1=document.createElement("td");
+            let td2=document.createElement("td");
+            //td 에 innerText 를 출력하고
+            td1.innerText=name;
+            td2.innerText=addr;
+
+            //tr 이라는 요소를 만들어서 참조값을 tr 이라는 변수에 담기
+            let tr=document.createElement("tr");
+            //td 2 개를 자식 요소로 추가하기 
+            tr.append(td1);
+            tr.append(td2);
+            
+            //tbody 의 자식요소로 tr 을 추가하기 
+            document.querySelector("tbody").append(tr);
+        });        
+    </script>
+</body>
+</html>

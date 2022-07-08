@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_createElement.html</title>
+    <style>
+        /* id 가 list 인 요소의 자식 중에서 마우가 올려진 li 요소를 선택 */
+        #list > li:hover{
+            background-color: yellow;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="inputName" placeholder="이름 입력...">
+    <button id="addBtn">추가</button>
+    <h3>친구 목록 입니다.</h3>
+    <ul id="list">
+        <li>김구라</li>
+        <li>해골</li>
+        <li>원숭이</li>
+    </ul>
+    <script>
+
+        document.querySelector("#addBtn").addEventListener("click", function(){
+            add();
+        });
+
+        document.querySelector("#inputName").addEventListener("keydown", function(e){
+            //만일 엔터키를 눌렀다면
+            if(e.keyCode==13){
+                add();
+            }
+        });
+
+        function add(){
+            //1. 입력한 이름을 읽어온다.
+            let name=document.querySelector("#inputName").value;
+            //2. li 요소를 만들어서 입력한 이름을 innerText 에 넣어준다.
+            let li=document.createElement("li");
+            li.innerText=name;
+            //3. 만든 li 요소를 ul 의 자식요소로 추가하기 
+            document.querySelector("#list").append(li);
+            //4. 입력창 지우기
+            document.querySelector("#inputName").value="";
+            //5. 새로만든 li 요소에 click 이벤트 리스너 등록 
+            li.addEventListener("click", function(){
+                let isDelete=confirm(this.innerText+" 를(을) 삭제 하시겠습니까?");
+                if(isDelete){
+                    this.remove();
+                }      
+            });
+        }
+
+        // 페이지 로딩 시점에 이미 만들어져 있는 li 의 참조값을 배열에 담아오기
+        let lis=document.querySelectorAll("#list > li");
+        // 반복문 돌면서 
+        for(let i=0; i<lis.length; i++){
+            //순서대로 이벤트 리스너 함수를 등록한다. 
+            lis[i].addEventListener("click", function(){
+                //click 이벤트가 일어난 바로 그 요소
+                //lis[i].remove();
+                let isDelete=confirm(this.innerText+" 를(을) 삭제 하시겠습니까?");
+                if(isDelete){
+                    this.remove();
+                }         
+            });
+        }
+
+    </script>
+</body>
+</html>

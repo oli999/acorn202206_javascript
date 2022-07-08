@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_random.html</title>
+</head>
+<body>
+    <h1>무슨수가 나올지 알아 맞춰 보세요</h1>
+    <p>맞춘 횟수: <strong id="count">0</strong></p>
+    <select id="selectedNum">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+    </select>
+    <button id="checkBtn">확인하기</button>
+    <p id="result"></p>
+    <script>
+        /*
+            확인하기 버튼을 누르면 0 ~ 2 사이의 랜덤한 정수를 얻어내서
+            p 요소의 innerText 에 출력하고
+            내가 선택한 숫자와 같은지 비교해서 
+            같으면 알림창에 "win" 이라고 출력하고
+            맞춘횟수를 1 증가 시키는 프로그래밍을 해 보세요
+
+            hint 
+
+            let myNum=Number(document.querySelector("#selectedNum").value);
+        */
+
+        let count=0;
+
+        document.querySelector("#checkBtn").addEventListener("click", function(){
+            //0~2 사이의 랜덤한 정수 얻어내기 
+            let ranNum=Math.floor(Math.random()*3);
+            document.querySelector("#result").innerText=ranNum;
+            //선택한 숫자 얻어내기
+            let myNum=Number(document.querySelector("#selectedNum").value);
+            //만일 랜덤한 정수와 내가 선택한 숫자와 같다면
+            if(ranNum == myNum){
+                alert("win");
+                count = count+1;
+                document.querySelector("#count").innerText=count;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_if3.html</title>
+</head>
+<body>
+    <p>점수를 입력하고 Enter 를 입력하세요</p>
+    <input type="text" id="inputJumsu" placeholder="0~100 사이의 점수 입력...">
+    <p id="result"></p>
+    <script>
+        /*
+            점수를 입력하기 Enter 를 쳤을때 
+            입력한 점수가
+            90 이상일때는 "A 입니다."
+            80 이상일때는 "B 입니다."
+            70 이상일때는 "C 입니다."
+            60 이상일때는 "D 입니다."
+            그 이외의 경우에는 "F 입니다."
+            를 p 요소에 출력하기 
+        */
+        // id 가 inputJumsu 인 요소에 무언가 입력했을때 실행할 함수 등록 
+        document.querySelector("#inputJumsu").addEventListener("keydown", function(e){
+            console.log("keydown!");
+            console.log(e);
+            //만일 Enter 를 쳤다면 
+            if( e.keyCode == 13 ){
+                //입력한 점수를 읽어와서
+                let jumsu=Number(document.querySelector("#inputJumsu").value);
+                //결과를 출력한다.
+                if(jumsu>=90){
+                    document.querySelector("#result").innerText="A 입니다.";
+                }else if(jumsu>=80){
+                    document.querySelector("#result").innerText="B 입니다.";
+                }else if(jumsu>=70){
+                    document.querySelector("#result").innerText="C 입니다.";
+                }else if(jumsu>=60){
+                    document.querySelector("#result").innerText="D 입니다.";
+                }else{
+                    document.querySelector("#result").innerText="F 입니다.";
+                }
+            }
+        });
+    </script>
+</body>
+</html>

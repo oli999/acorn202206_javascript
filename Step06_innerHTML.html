@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step06_innerHTML.html</title>
+</head>
+<body>
+    <h1> innerText vs innerHTML </h1>
+    <button id="one">innerText</button>
+    <button id="two">innerHTML</button>
+    <p id="result"></p>
+    <button id="insertBtn">insertText</button>
+    <button id="insertBtn2">insertHTML</button>
+    <div id="wrapper">
+        <p>p 요소 입니다.</p>
+    </div>
+    <script>
+        // string type 으로 html 형식의 문자열이 있다. 
+        let str='<a href="https://daum.net" >daum</a>';
+
+        document.querySelector("#one").addEventListener("click", function(){
+            //넣어준 문자열을 단순히 문자열로만 출력해 준다.
+            document.querySelector("#result").innerText=str;
+        });
+
+        document.querySelector("#two").addEventListener("click", function(){
+            //넣어준 문자열을 HTML 해석 규칙에 맞게 해석을 해준다.
+            document.querySelector("#result").innerHTML=str;
+        });
+
+        /*
+            google 검색에 
+
+            insertAdjacentText 
+            insertAdjacentHtml
+
+            두가지 단어를 검색해서 학습해 보세요
+        */
+
+        document.querySelector("#insertBtn").addEventListener("click", function(){
+            document.querySelector("#wrapper").insertAdjacentText("beforeend", str);
+        });
+        document.querySelector("#insertBtn2").addEventListener("click", function(){
+            document.querySelector("#wrapper").insertAdjacentHTML("beforeend", str);
+        });
+    </script>
+</body>
+</html>

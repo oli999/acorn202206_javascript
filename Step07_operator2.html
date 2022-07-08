@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_operator2.html</title>
+</head>
+<body>
+    <h1>논리 연산자</h1>
+    <script>
+        /*
+        2. 논리(boolean) 연산자
+        - 논리값을 연산해주는 연산자
+        */
+        
+        //문자열을 입력 받아서
+        const inputStr=prompt("임의의 정수를 입력 하세요");
+        //숫자로 바꾸기
+        const inputNum=Number(inputStr);
+
+        //입력한 수가 0 보다 큰수인지 확인한다.
+        if(inputNum > 0){
+            console.log("입력한 수는 0 보다 큽니다.");
+        }
+        //입력한 수가 짝수인지 확인한다.
+        if(inputNum%2 == 0){
+            console.log("입력한 수는 짝수 입니다.");
+        }
+        //입력한 수가 0보다 큰수이고 동시에 짝수인지 확인한다.
+        if(inputNum > 0){
+            if(inputNum%2 == 0){
+                console.log("입력한 수는 0보다 크고 동시에 짝수 입니다.");
+            }
+        }
+
+        /*
+            && 는 and 연산자이고 읽을때는 "그리고" 라고 읽으면 된다.
+            연산의 법칙은 
+            연산에 참여하는 모든 boolean type 데이터가 true 일때만 결과값이 true 가 나온다. 
+        */
+
+        //만일 inputNum 이 0 보다 크고(그리고) inputNum 을 2 로 나눈 나머지가 0 과 같다면
+        if(inputNum>0 && inputNum%2==0){
+            console.log("입력한 수는 0보다 크고 동시에 짝수 입니다.");
+        }
+
+        /*
+            || 는 or 연산자이고 읽을때는 "또는" 이라고 읽으면 된다.
+            연산의 법칙은 
+            연산에 참여하는 모든 boolean type 데이터가 어느 하나만 true 이면 결과는 true 가 나온다.  
+        */
+        
+        //만일 inputNum 이 0 보다 크거나 inputNum 을 2로 나눈 나머지가 0과 같다면 
+        if(inputNum>0 || inputNum%2==0){
+            console.log("입력한 수는 0보다 크거나 또는 짝수 입니다.");
+        }
+
+        let result1=false&&false; //false
+        let result2=false&&true; //false
+        let result3=true&&false; //false
+        let result4=true&&true; //true
+
+        //연산에 참여하는 boolean 값이 어느 하나만 true  면 결과는 true 이다.
+        let result5=false||false; //false
+        let result6=false||true; //true
+        let result7=true||false; //true
+        let result8=true||true; //true
+
+        /*
+            ! 는 논리값을 반전시키는 not 연산자이다. 
+            읽을때는 "~가 아니면" 이라고 읽으면 된다. 
+        */
+        let result9=!true;  //false
+        let result10=!false; //true
+
+        let isRun=true;
+        let isWait=false;
+
+        /*
+            1. 만일 isRun 이 false 라면
+            2. 만일 isRun 이 true 가 아니라면
+            3. 만일 달리지 않을꺼면 
+        */
+        if( !isRun ){ 
+
+        }
+        if( isRun == false){
+
+        }
+        //만일 isRun 이 true 가 아니거나 isWait 이 true 가 아니라면 
+        //만일 달리지 않거나 기다리지 않을거면
+        if(!isRun || !isWait){
+
+        }
+    </script>
+</body>
+</html>
