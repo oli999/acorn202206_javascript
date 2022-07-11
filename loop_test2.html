@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop_test2.html</title>
+</head>
+<body>
+    <script>
+        //배열
+        let nums=[10, 20, 30, 40, 50];
+        for(let i=0; i<nums.length; i++){
+            //i번째 방에 들어있는 item 참조하기
+            let tmp=nums[i];
+            //참조된 값 사용하기
+            console.log(tmp);
+        }
+        //object 가 item 으로 들어 있는 배열
+        let members=[
+            {num:1, name:"김구라"},
+            {num:2, name:"해골"},
+            {num:3, name:"원숭이"}
+        ];
+
+        for(let i=0; i<members.length; i++){
+            //tmp 는 object type 
+            let tmp=members[i];
+            console.log(tmp.num+" | "+tmp.name);
+        }
+    </script>
+</body>
+</html>

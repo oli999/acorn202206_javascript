@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop_test.html</title>
+</head>
+<body>
+    <h1>반복문 테스트1</h1>
+    <button onclick="clicked()">눌러 보셈</button>
+    <button id="myBtn">눌러보셈2</button>
+    <script>
+
+        document.querySelector("#myBtn").addEventListener("click", function(){
+            console.log("callback 함수가 호출됨");
+        });
+
+        function clicked(){
+            console.log("clicked() 호출됨");
+        }
+
+        let a=10;
+        /*
+            1. let i=0  는 for 문 안에서만 사용할수 있는 local variable 만들고 초기값 0 대입
+            for 문이 종료 되면 i 는 사라진다. 
+            for 문에 실행순서가 왔을때 최초 한번만 실행된다. 
+
+            2. i<5 이 조건이 false 가 될때까지 for 문의 { } 블럭이 반복 수행된다.
+            3. i++ 에서 ++은 i 안에 있는 숫자를 1 증가 시키는 증감 연산자 이다.
+        */
+        for(let i=0; i<5; i++){
+            console.log(i);
+        }
+
+        console.log("javascript 가 로딩 되었습니다.");
+    </script>
+</body>
+</html>
