@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step19_flex.html</title>
+    <style>
+        .wrapper{
+            background-color: #cecece;
+            margin-bottom: 100px;
+            display: flex;
+            transition: all 0.3s ease-out;
+            height: 300px;
+        }
+        .item{
+            background-color: yellow;
+            border: 1px solid red;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    width : <span id="currentWrapperWidth">100%</span>
+    <input type="range" id="wrapperWidth" value="100" max="100" min="50">
+    <br>
+    height : <span id="currentWrapperHeight">100px</span>
+    <input type="range" id="wrapperHeight" value="300" max="500" min="100">
+    <br>
+    flex-direction : 
+    <select id="flexDirection">
+        <option selected>row</option>
+        <option>row-reverse</option>
+        <option>column</option>
+        <option>column-reverse</option>
+    </select>
+    <br>
+    flex-wrap :
+    <select id="flexWrap">
+        <option selected>nowrap</option>
+        <option>wrap</option>
+        <option>wrap-reverse</option>
+    </select>
+    <br>
+    justify-content :
+    <select id="justifyContent">
+        <option selected>flex-start</option>
+        <option>flex-end</option>
+        <option>center</option>
+        <option>space-between</option>
+        <option>space-around</option>
+        <option>space-evenly</option>
+    </select>
+    <br>
+    align-items : 
+    <select id="alignItems">
+        <option selected>stretch</option>
+        <option>flex-start</option>
+        <option>flex-end</option>
+        <option>center</option>
+        <option>base-line</option>
+    </select>
+    <br>
+    align-content :
+    <select id="alignContent">
+        <option selected>normal</option>
+        <option>flex-start</option>
+        <option>flex-end</option>
+        <option>center</option>
+        <option>space-between</option>
+        <option>space-around</option>
+        <option>space-evenly</option>
+        <option>stretch</option>
+    </select>
+    <div class="wrapper">
+        <div class="item">item1</div>
+        <div class="item">item2</div>
+        <div class="item">item3</div>
+        <div class="item">item4</div>
+        <div class="item">item5</div>
+    </div>
+    <script>
+        document.querySelector("#wrapperWidth").addEventListener("mousemove", function(){
+            document.querySelector(".wrapper").style.width=this.value+"%";
+            document.querySelector("#currentWrapperWidth").innerText=this.value+"%";
+        });
+        document.querySelector("#wrapperHeight").addEventListener("mousemove", function(){
+            document.querySelector(".wrapper").style.height=this.value+"px";
+            document.querySelector("#currentWrapperHeight").innerText=this.value+"px";
+        });
+
+
+        document.querySelector("#flexDirection").addEventListener("change", function(){
+            document.querySelector(".wrapper").style.flexDirection=this.value;
+        });
+        document.querySelector("#flexWrap").addEventListener("change", function(){
+            document.querySelector(".wrapper").style.flexWrap=this.value;
+        });
+        document.querySelector("#justifyContent").addEventListener("change", function(){
+            document.querySelector(".wrapper").style.justifyContent=this.value;
+        });
+        document.querySelector("#alignItems").addEventListener("change", function(){
+            document.querySelector(".wrapper").style.alignItems=this.value;
+        });
+        document.querySelector("#alignContent").addEventListener("change", function(){
+            document.querySelector(".wrapper").style.alignContent=this.value;
+        });
+
+       
+    </script>
+</body>
+</html>
