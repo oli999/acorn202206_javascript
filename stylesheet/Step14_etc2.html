@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step14_etc2.html</title>
+	<style>
+		.wrapper1{
+			width: 300px;
+			height: 300px;
+			background-color: yellow;
+			border: 1px solid green;
+			color: white;
+			overflow: visible; /* default 값 */
+		}
+		#one{
+			width: 500px;
+			height: 100px;
+			background-color: blue;
+		}
+		.wrapper2{
+			width: 300px;
+			height: 300px;
+			background-color: yellow;
+			border: 1px solid green;
+			color: white;
+			/* 
+				넘친 컨텐츠 처리
+				visible | hidden | scroll | auto
+
+				overflow, overflow-x, overflow-y
+			*/
+			overflow: scroll; 
+		}
+		#two{
+			width: 100px;
+			height: 500px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+<h1>overflow 처리</h1>
+<div class="wrapper1">
+	<div id="one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quia illo veritatis. Repellendus, numquam? Quisquam iste, dicta dignissimos magni dolores incidunt vel ipsam natus vero voluptatum enim voluptatibus cum maiores!</div>
+</div>
+<div class="wrapper2">
+	<div id="two">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quia illo veritatis. Repellendus, numquam? Quisquam iste, dicta dignissimos magni dolores incidunt vel ipsam natus vero voluptatum enim voluptatibus cum maiores!</div>
+</div>		
+</body>
+</html>

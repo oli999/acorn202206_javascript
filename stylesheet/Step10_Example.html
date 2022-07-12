@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step10_Example.html</title>
+</head>
+<body>
+<h1>display 속성 활용</h1>
+<button id="hideBtn">숨기기</button>
+<button id="showBtn">보이기</button>
+<button id="toggleBtn">토글</button>
+<br/>
+<img src="images/kim1.png" id="one"/>
+<script>
+	document.querySelector("#hideBtn")
+	.addEventListener("click", function(){
+		document.querySelector("#one")
+		.style.display="none";
+	});
+	document.querySelector("#showBtn")
+	.addEventListener("click", function(){
+		document.querySelector("#one")
+		.style.display="inline";
+	});
+
+	//보였다 숨겼다를 반복(토글) 시키기
+	document.querySelector("#toggleBtn")
+	.addEventListener("click", function(){
+		//현재 display 의 value 값을 읽어온다. 
+		let current=document.querySelector("#one").style.display;
+		if(current=="none"){
+			//보이게 한다.
+			document.querySelector("#one").style.display="inline";
+		}else{// "" or "inline"
+			//안보이게 한다.
+			document.querySelector("#one").style.display="none";
+		}
+	});
+</script>	
+</body>
+</html>

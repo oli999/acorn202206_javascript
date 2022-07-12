@@ -1,0 +1,7 @@
+@charset "utf-8"; /* 한글을 이상한 문자열로 인식하지 않도록 방지 */
+/*
+    html 페이지에서 <style></style> 요소 안에 작성하는 문법과 같다 
+*/
+p{
+    border: 1px solid red;
+}

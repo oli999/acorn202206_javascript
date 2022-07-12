@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_Selector5.html</title>
+	<style>
+		/* .container 의 자손 중에서 p 선택*/
+		.container p{
+			background-color: yellow;
+		}
+		/* .constiner 의 자식 중에서 p 선택 */
+		.container > p{
+			color: blue;
+		}
+
+		/* 조금 더 구체적으로 선택 */
+		.container > .sub > p{
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint error quasi exercitationem, quis voluptates! Consectetur, hic! Vel libero, maxime itaque error! Distinctio nam ducimus molestias, laboriosam aspernatur fuga cum sapiente!</p>
+	<div class="sub">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus reprehenderit ex quaerat aut, culpa error eligendi praesentium, magnam, corporis doloremque accusantium obcaecati! Necessitatibus dolore id corrupti velit nesciunt numquam fugit?</p>
+		<p>p1</p>
+		<p>p2</p>
+		<p>p3</p>
+	</div>
+</div>		
+</body>
+</html>

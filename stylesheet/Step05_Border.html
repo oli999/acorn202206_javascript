@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step05_Border.html</title>
+	<style>
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: #999;
+		}
+		.box{
+			/* 경계선의 폭 */
+			border-width: 10px;
+			/* 경계선 스타일 none | solid | dotted | dashed | double | inset | outset */
+			border-style: solid;
+			/* 경계선 색상 */
+			border-color: blue;
+		}
+		.box2{
+			/* .box 안의 css 를 한줄로 작성하면 */
+			border: 10px solid blue;
+		}
+		.box3{
+			/* border-width: 10px; 를 풀어서 쓰면 */
+			border-top-width: 10px;
+			border-right-width: 10px;
+			border-bottom-width: 10px;
+			border-left-width: 10px;
+			/* border-style: dotted; */
+			border-top-style: dotted;
+			border-right-style: dotted;
+			border-bottom-style: dotted;
+			border-left-style: dotted;
+			/* border-color: red;*/
+			border-top-color: red;
+			border-right-color: red;
+			border-bottom-color: red;
+			border-left-color: red;
+		}
+		.box4{
+			border-width: 10px 10px 10px 10px;
+			border-style: dotted dotted dotted dotted;
+			border-color: red red red red;
+		}
+		.box5{
+			border-width: 10px 20px 30px 40px;
+			border-style: solid dotted dashed inset;
+			border-color: red green blue pink;
+		}
+	</style>
+</head>
+<body>
+<div></div>
+<div class="box">.box</div>
+<div class="box2">.box2</div>
+<div class="box3">.box3</div>
+<div class="box4">.box4</div>
+<div class="box5">.box5</div>
+</body>
+</html>

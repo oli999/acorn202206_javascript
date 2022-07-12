@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step10_Display.html</title>
+	<style>
+		#one{
+			/* 문서 객체는 만들어 졌지만 공간을 차지하지 않고
+			보이지 않게 하기  */
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<h1>display 속성 테스트</h1>
+<button id="showBtn">눌러보셈</button>
+<p id="one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus cupiditate ea earum sequi aspernatur reprehenderit at quia, consequuntur consequatur iste quos necessitatibus eveniet ipsam, vero, eaque iusto maiores, ipsum explicabo.</p>	
+<img src="images/kim1.png" />
+<script>
+	document.querySelector("#showBtn")
+	.addEventListener("click", function(){
+		document.querySelector("#one").style.display="block";
+	});
+</script>
+</body>
+</html>

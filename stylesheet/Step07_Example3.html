@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step07_Example3.html</title>
+	<style>
+		/* window 전체를 cover 하기 */
+		.backdrop{
+			background-color: #000;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0.3;
+			/* 
+				none 은 안보이게 하기 
+				display: none | block | inline | inline-block ;
+			*/
+			display: none; 
+		}
+		p{
+			background-color: #0f0;
+		}
+	</style>
+</head>
+<body>
+<h1>position : fixed 응용</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est fuga incidunt aperiam exercitationem autem. Veniam odio pariatur doloremque. Eligendi eaque accusamus repellendus officiis placeat voluptates. Ab autem, ex enim expedita!</p>	
+<button id="showBtn">눌러보셈</button>
+<div class="backdrop"></div>
+<script>
+	document.querySelector("#showBtn")
+	.addEventListener("click", function(){
+		// .backdrop 의 인라인 css 조작
+		document.querySelector(".backdrop").style.display="block";
+	});
+
+	document.querySelector(".backdrop")
+	.addEventListener("click", function(){
+		this.style.display="none";
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step09_Float3.html</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			border: 1px solid red;
+			float: left; /* left | right */
+		}
+		p{
+			clear: both; /* left | right | both*/
+		}
+		.wrapper{
+			border: 1px solid blue;
+			background-color: #999;
+			/* float 된 자식 요소를 감쌀수 있도록 설정 */
+			overflow: auto;
+		}
+	</style>
+</head>
+<body>
+<h1>block 요소를 inline 요소 처럼 한줄로 배치</h1>
+<div class="wrapper">
+	<div class="box">div1</div>
+	<div class="box">div2</div>
+	<div class="box">div3</div>
+	<div class="box">div4</div>
+	<div class="box">div5</div>
+</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas repellat velit eius. Minus nesciunt rem repellat officiis similique molestias voluptatem cum tempora, doloribus quas autem. Perspiciatis eos, enim. Velit, numquam!</p>
+</body>
+</html>

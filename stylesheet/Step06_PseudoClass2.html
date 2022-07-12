@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step06_PseudoClass2.html</title>
+	<style>
+		a{	
+			text-decoration: none; /* 밑줄 제거 */
+		}
+		a:hover{
+			text-decoration: underline; /* 밑줄 추가 */
+		}
+		/* 한번도 방문하지 않은 링크 가상 클래스 선택자 */
+		a:link{
+			color: #000;
+		}
+		/* 이미 방문 했던 링크 가상 클래스 선택자 */
+		a:visited{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+<a href="http://acornacademy.co.kr">study</a>
+<a href="http://daum.net">daum</a>
+<a href="http://naver.com">naver</a>	
+</body>
+</html>

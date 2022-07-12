@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step12_Text.html</title>
+	<style>
+		.wrapper1{
+			/* [ 글자 스타일 ]
+				normal | italic
+				상속된다.	
+			 */
+			font-style: italic; 
+			/* [ 글꼴 ]
+			   좌측에서 부터 순서대로 적용된다. 
+			   상속된다. 
+			*/
+			font-family: "Times New Roman", Consolas, NanumGothic, Gothic, serif, sans-sefif;
+			/*
+				[글자의 굵기]
+				normal | bold
+				상속된다.
+			*/
+			font-weight: bold;
+			/* 
+				[글자의 크기]
+				상속된다.
+			*/
+			font-size: 20px;
+			/* 
+				[글자 꾸미기]
+				none | underline | overline | line-through
+				상속된다.
+			*/
+			text-decoration: underline;
+			/* 
+				[글자 색상]
+				상속된다. 
+			*/
+			color: red;
+		}
+		.wrapper2{
+			/* 
+				[ 글자 변환 ]
+				none | uppercase | lowercase | capitalize
+				상속된다. 
+			*/
+			text-transform: capitalize;
+			/*
+				[ 자간 ]
+				상속된다.
+			*/
+			letter-spacing: 5px;
+			/* 
+				[ 행간 ]
+				상속된다.
+			*/
+			line-height: 30px;
+			/* 
+				[첫단어 들여쓰기]
+				상속된다. 
+			*/
+			text-indent: 100px;
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper1">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem expedita in excepturi corrupti odit molestiae quas illum error, eaque! Sapiente, eius. Suscipit natus eveniet, saepe maiores culpa ea dicta deserunt.</p>
+</div>
+<div class="wrapper2">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero magnam itaque, sequi corporis maxime ipsum natus aliquam ad expedita hic perferendis doloremque commodi, ea! Commodi voluptatibus alias ex accusamus.</p>
+</div>
+<div class="wrapper3">
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum libero magnam itaque, sequi corporis maxime ipsum natus aliquam ad expedita hic perferendis doloremque commodi, ea! Commodi voluptatibus alias ex accusamus.</p>
+</div>
+</body>
+</html>

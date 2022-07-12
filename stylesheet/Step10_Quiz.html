@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step10_Quiz.html</title>
+	<style>
+		#two, #three{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<ul class="nav">
+	<li><a href="#one">one</a></li>
+	<li><a href="#two">two</a></li>
+	<li><a href="#three">three</a></li>
+</ul>
+<p class="nav-content" id="one">one Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quis commodi dicta suscipit, deleniti, voluptas adipisci aliquam, aspernatur laboriosam a quam ut excepturi accusamus cupiditate dolor nihil ducimus reiciendis qui!</p>	
+<p class="nav-content" id="two">two Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quis commodi dicta suscipit, deleniti, voluptas adipisci aliquam, aspernatur laboriosam a quam ut excepturi accusamus cupiditate dolor nihil ducimus reiciendis qui!</p>	
+<p class="nav-content" id="three">three Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quis commodi dicta suscipit, deleniti, voluptas adipisci aliquam, aspernatur laboriosam a quam ut excepturi accusamus cupiditate dolor nihil ducimus reiciendis qui!</p>	
+<script>
+	//모든 a 요소의 참조값을 배열에 담아오기 
+	var links=document.querySelectorAll(".nav a");
+
+	//반복문 돌면서 이벤트 리스너 등록하기 
+	for(var i=0; i<links.length; i++){
+		links[i].addEventListener("click", function(){
+			//일단 모두다 숨기기 
+			var navContents=document.querySelectorAll(".nav-content");
+
+			navContents.forEach(function(item){
+				item.style.display="none";
+			});
+
+			//이벤트가 일어난 a 요소의 href 속성 value 값 읽어오기 
+			var sel=this.getAttribute("href");
+			console.log("sel:"+sel);
+			//읽어온 문자열을 선택자로 활용해서 보이게 하기 
+			document.querySelector(sel).style.display="block";
+		});
+	}
+</script>
+</body>
+</html>

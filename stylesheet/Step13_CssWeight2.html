@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step13_CssWeight2.html</title>
+	<style>
+		/*
+			[ css 가중치 정리 ]
+
+			1. css 는 선택자가 상세할수록 가중치가 크다.
+			2. 가중치가 같으면 나중에 정의한 css 가 적용된다.
+
+			요소명 선택자 가중치 : 1점
+			클래스 선택자 가중치 : 10점
+			아이디 선택자 가중치 : 100점
+
+			인라인 css 가중치 : 1000 점
+			!important 가중치 : 10000점 
+		*/
+		li{ background-color: yellow; } /* 1 */
+		
+		ul li{ background-color: blue; } /* 2 */
+
+		.active{ background-color: green; } /* 10 */
+
+		li.active{ background-color: red; } /* 11 */
+
+		#one{ background-color: pink; } /* 100 */
+		
+		#one{ background-color: white !important; } /* 10000 */
+	</style>
+</head>
+<body>
+<div class="wrapper">
+	<div class="nav">
+		<ul>
+			<li style="background-color: #999;" class="active" id="one">하나</li>
+		</ul>
+	</div>
+</div>	
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step15_boxSizing.html</title>
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: yellow;
+			border: 10px solid red;
+			padding: 10px;
+			margin: 10px;
+			/* 
+			content-box (default) | border-box 
+			
+			content-box : width 와 height 에 아무것도 포함하지 않음
+
+			border-box : width 와 height 에 padding 과 border 포함
+			
+			*/
+			box-sizing: border-box;
+		}
+	</style>
+</head>
+<body>
+<h1>box-sigzing 속성</h1>
+<div class="box">.box</div>	
+</body>
+</html>

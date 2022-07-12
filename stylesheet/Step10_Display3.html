@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step10_Display3.html</title>
+	<style>
+		/*
+			[ inline 요소 ]
+			- width 와 height 를 지정할수 없다.
+			- left & right margin, padding 을 가질수 있다.
+			- top & bottom margin, padding 을 가질수 없다. 
+			- 왼쪽과 오른쪽에 다른 요소가 올수 있다. 
+		*/
+		#one{
+			border: 1px solid red;
+			display: inline;
+		}
+		/*
+			[ inline block 요소 ]
+			- width, height, margin, padding 모두 가능
+			- 왼쪽과 오른쪽에 다른 요소가 올수 있다.
+		*/
+		#two{
+			border: 1px solid blue;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+<h1>inline vs inline-block</h1>
+<div id="one">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</div>
+<div id="two">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</div>	
+</body>
+</html>

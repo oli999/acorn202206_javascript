@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step02_Selector4.html</title>
+	<style>
+		/* #one 의 자손 중에서 li 선택 */
+		#one li{
+			color: #ff00ff;
+		}
+		/* .container 의 자손 중에서 li 선택 */
+		.container li{
+			background-color: #cecece;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<ul>
+		<li>하나</li>
+		<li>두울</li>
+	</ul>
+	<hr/> <!-- hr 은 수평 구분 선입니다. -->
+	<ul id="one">
+		<li>김구라</li>
+		<li>해골</li>
+	</ul>
+</div>	
+</body>
+</html>

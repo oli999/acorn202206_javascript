@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step16_Unit.html</title>
+	<style>
+		/* 
+			[ 크기나 거리를 나타내는 단위 ]
+
+			px, %, em, rem
+
+			px => 점(화소)의 갯수
+			% => 부모의 크기에 대한 상대적 비율
+			em => 상속받은 글자의 크기의 배수 
+			ex) 상속받은 글자의 크기가 16px 이라면
+			
+			1em 은 16px
+			1.5em 은 24px 
+			2em 은 32px
+			3em 은 48px 
+			
+			rem => 최상위요소(html) 의 글자의 크기의 배수
+			html 의 font-size: 14px 이라면
+			1rem => 상속받은 글자의 크기와 상관없이 14px
+			2rem => 상속받은 글자의 크기와 상관없이 28px
+		*/
+		.wrapper{
+			background-color: yellow;
+			width: 500px;
+			margin: 0 auto;
+		}
+		.wrapper2{
+			background-color: yellow;
+			width: 50%; /* 부모 width 의 50% */
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+<div class="wrapper">.wrapper</div>
+<div class="wrapper2">.wrapper2</div>	
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step08_PseudoElement.html</title>
+	<style>
+		/* 
+			[ 가상요소 선택자 ] 
+
+			존재하지 않는데 존재한다고 가정되는 요소 => 가상요소 
+		*/
+		p:first-letter{
+			font-weight: bold;
+			color: red;
+		}
+		#one:first-line{
+			background-color: yellow;
+		}
+		.quote:before{
+			content:"'";
+			color: red;
+		}
+		.quote:after{
+			content:"'";
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+<h1>Pseudo Element (가상요소) 선택자 활용</h1>	
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At minima, adipisci sed. Quas animi ipsum rem veritatis ea impedit voluptas natus, tempore laborum necessitatibus quo cum. Iure voluptatem, cum sunt.</p>
+<p id="one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim optio illo, dolorum ducimus veniam saepe placeat aliquid temporibus corrupti doloribus quas nobis quo quam incidunt, at amet, harum iusto voluptatem.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis consequatur tempora id suscipit voluptates, culpa perspiciatis voluptatum consectetur soluta. Illo nemo ad cum repellat voluptas maxime alias, incidunt tempore fugit.</p>
+<p class="quote">천리길도 한걸음 부터</p>
+<p class="quote">열심히 공부하자</p>
+<p class="quote">어쩌구.. 저쩌구...</p>
+</body>
+</html>

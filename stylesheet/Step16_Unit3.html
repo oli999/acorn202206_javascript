@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step16_Unit3.html</title>
+	<style>
+		html{
+			/* 1 rem 의 기준 크기 (default 값은 16px) */
+			font-size: 10px;
+		}
+
+		#one{
+			font-size: 16px;
+		}
+		#two{
+			/*
+				[ css3 에서 추가된 단위 rem ]
+				-최상위(root) 글자 크기의 배수 
+                -html 요소의 글자 크기의 배수 이다. 
+			*/
+			font-size: 1rem; 
+		}
+		#three{
+			font-size: 2rem;
+		}
+		#four{
+			font-size: 3rem;
+		}
+		.box{
+			width: 10rem;
+			height: 10rem;
+			background-color: yellow;
+			margin-left: 5rem;
+			border: 1px solid red;
+		}
+		.wrapper{
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+<p>ABCD</p>
+<p id="one">ABCD</p>
+<p id="two">ABCD</p>
+<p id="three">ABCD</p>
+<p id="four">ABCD</p>
+<div class="box"></div>
+<div class="wrapper">
+	<div class="box"></div>
+</div>	
+</body>
+</html>

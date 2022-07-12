@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step11_z-index.html</title>
+	<style>
+		.wrapper{
+			position: relative;
+			border: 1px solid red;
+		}
+		.wrapper img{
+			position: absolute;
+			width: 200px;
+		}
+		#one{
+			top: 100px;
+			left: 100px;
+			/* z-index 값이 상대적으로 크면 작은거 보다 위에 배치 된다.*/
+			z-index: 10;
+		}
+		#two{
+			top: 150px;
+			left: 150px;
+			z-index: 9;
+		}
+		#three{
+			top: 200px;
+			left: 200px;
+			z-index: 8;
+		}
+	</style>
+</head>
+<body>
+<h1>z-index 테스트</h1>
+<div class="wrapper">
+	<img id="one" src="images/image1.png"/>
+	<img id="two" src="images/image2.png"/>
+	<img id="three" src="images/image3.png"/>
+</div>	
+</body>
+</html>

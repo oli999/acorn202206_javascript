@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step16_Unit2.html</title>
+	<style>
+		#one{
+			font-size: 16px;
+		}
+		#two{
+			font-size: 1em; /* inherit 된 글자 크기의 1배 */
+		}
+		#three{
+			font-size: 2em; /* inherit 된 글자 크기의 2배 */
+		}
+		#four{
+			font-size: 3em; /* inherit 된 글자 크기의 3배 */
+		}
+		.box{
+			width: 10em;
+			height: 10em;
+			background-color: yellow;
+			margin-left: 5em;
+			border: 1px solid red;
+		}
+		.wrapper{
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+<h1>기본 글자의 크기는 16px 이다. </h1>
+<p>ABCD 글자크기:16px</p>	
+<p id="one">ABCD 글자크기:16px</p>
+<p id="two">ABCD 글자크기:16px</p>
+<p id="three">ABCD 글자크기:32px</p>
+<p id="four">ABCD 글자크기:48px</p>
+<div class="box"></div>
+<div class="wrapper">
+	<div class="box"></div>
+</div>	
+</body>
+</html>

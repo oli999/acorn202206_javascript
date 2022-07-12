@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step10_Display2.html</title>
+	<style>
+		.wrapper{
+			border: 1px solid red;
+		}
+		span{
+			border: 1px solid green;
+		}
+		#one{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<h1>인라인 요소의 display 조작</h1>
+<button id="showBtn">눌러보셈</button>
+<div class="wrapper">
+	<span>하나</span><span id="one">두울</span><span>세엣</span>
+</div>
+<script>
+	document.querySelector("#showBtn")
+	.addEventListener("click", function(){
+		document.querySelector("#one")
+		.style.display="inline";
+	});
+</script>	
+</body>
+</html>

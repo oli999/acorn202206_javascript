@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step18_form2.html</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+<body>
+   <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>회원 가입 폼</h1>
+                <form action="signup.jsp">
+                    <div class="mb-3">
+                        <label class="form-label" for="email">이메일</label>
+                        <input class="form-control" type="text" id="email" name="email">
+                        <div class="invalid-feedback">이메일 형식에 맞게 입력 하세요</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="pwd">비밀번호</label>
+                        <input class="form-control" type="password" id="pwd" name="pwd">
+                        <div class="valid-feedback">사용할수 있는 비밀 번호 입니다.</div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">가입</button>
+                </form>
+                <script>
+
+                    document.querySelector("#email").addEventListener("input", function(){
+                        //1. 입력한 이메일을 읽어와서
+                        let inputEmail=document.querySelector("#email").value;
+                        //2. 이메일 형식에 맞는지 확인해서
+                        let index=inputEmail.indexOf("@"); // @ 문자열이 몇번째 인덱스에 있는지 확인 
+                        //3. 맞으면 is-valid 클래스를 추가, 클리면 is-invalid 클래스를 추가 
+                        if(index >= 0){ // @ 가 어딘가 존재 하는 것이고 
+                            this.classList.remove("is-invalid");
+                            this.classList.add("is-valid");
+                        }else{//그렇지 않으면 ( -1 이면 )  @ 가 없는 것이다.
+                            this.classList.remove("is-valid");
+                            this.classList.add("is-invalid");
+                        }
+                    });
+                    
+                </script>
+            </div>
+        </div>
+   </div> 
+</body>
+</html>
+
+
+
+
+
+
+

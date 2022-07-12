@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Step06_PseudoClass.html</title>
+	<style>
+		/*
+			Pseudo Class (가상 클래스)
+
+			- 시각적으로 확인 할수 없지만 특정 상황해서 있다고 간주 되는 클래스 
+		*/
+
+		.box{
+			width: 100px;
+			height: 100px;
+			border: 1px solid red;
+		}
+		/* hover 가상 클래스 선택자 */
+		.box:hover{
+			background-color: yellow;
+		}
+		/* focus 가상 클래스 선택자 */
+		input:focus{
+			background-color: yellow;
+		}
+		
+		button:focus{
+			color: red;
+		}
+		/* active 가상 클래스 선택자 (버튼을 누르고 있는 경우)*/
+		button:active{
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+<div class="box"></div>
+<input type="text"/>
+<input type="text"/>
+<button>버튼</button>
+<button>버튼</button>	
+</body>
+</html>
