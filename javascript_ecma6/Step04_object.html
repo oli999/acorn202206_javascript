@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_object.html</title>
+</head>
+<body>
+    <input type="text" id="inputMsg" placeholder="문자열 입력...">
+    <script>
+        let mem={num:1, name:"김구라", addr:"노량진"};
+        /*
+        let num=mem.num;
+        let name=mem.name;
+        위의 두줄을 줄여서 아래와 같이 쓸수 있다.
+        */
+
+        //객체를 분해해서 변수에 할당하기 (객체분해할당)
+        let {num, name}=mem;
+
+        let useMem=function({num, name}){
+            console.log(num+" | "+name);
+        };
+
+        useMem({num:2, name:"해골"});
+        useMem(mem);
+
+        document.querySelector("#inputMsg").addEventListener("keydown", function(e){
+            console.log(e.keyCode);
+        });
+
+        document.querySelector("#inputMsg").addEventListener("keydown", function({keyCode}){
+            console.log(keyCode);
+        });
+    </script>
+</body>
+</html>

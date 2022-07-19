@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step06_templateString.html</title>
+</head>
+<body>
+    <script>
+        // backtick 기호를 이용해서 문자열을 만들수 있다.
+        let info=`어쩌구... 저쩌구...`;
+        // backtick 은 여러줄의 문자열을 편하게 작성할수 있다.
+        let html=`
+            <ul>
+                <li>하나</li>
+                <li>두울</li>
+            </ul>
+        `;
+        // backtick 은 변수안에 들어 있는 숫자나 문자열을 연결할때도 편하다.
+        // ${변수나, 객체, 배열을 참조하거나 함수를 호출할수 있음, 연산자도 가능}
+        let name1="김구라";
+        let name2="해골";
+        let html2=`
+            <ul>
+                <li>${name1}</li>
+                <li>${name2}</li>
+            </ul>
+        `;
+    </script>
+</body>
+</html>

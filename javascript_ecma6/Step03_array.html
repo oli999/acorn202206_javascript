@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_array.html</title>
+</head>
+<body>
+    <script>
+        const names=["김구라", "해골", "원숭이"];
+        
+        //콘솔에서 a, b, c 변수를 확인해 보세요
+        let [a, b, c]=names;
+        //콘솔에서 arr 을 확인해 보세요.
+        let arr=[...names, "주뎅이", "덩어리"];
+
+        const result=names.map((item)=>{
+            console.log(item);
+            return item+"님";
+        });
+        /*
+            1. 배열은 map() 함수를 원래 가지고 있다.
+            2. map() 함수를 호출하면서 함수를 전달 해야 한다.
+            3. 전달한 함수는 배열의 size 만큼 즉시 반복 호출된다.
+            4. 반복호출 하면서 그 함수에 배열에 저장된 item 을 순서대로 전달 해준다.
+            5. 함수안에서 리턴해주는 값을 순서대로 모아서 새로운 배열을 map() 함수가 리턴해준다.   
+        */
+        const result2=names.map((item)=>item+"님");
+    </script>
+</body>
+</html>

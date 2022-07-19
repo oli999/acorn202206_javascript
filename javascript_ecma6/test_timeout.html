@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test_timeout.html</title>
+</head>
+<body>
+    <script>
+        /*
+            setTimeout() 이라는 builtin 함수가 있다.
+
+            setTimeout(콜백함수, 지연시간(ms))
+
+            어떤 작업을 일정시간 지연 이후에 하고 싶을때 사용한다. 
+        */
+
+        setTimeout(function(){
+            console.log("5 초가 지났네?");
+        }, 5000);
+
+        //인자로 전달된 함수를 10 초 이후에 호출해주는 함수 
+        function wait(callback){
+            setTimeout(function(){
+                callback();
+            }, 10000);
+        }
+
+        wait(function(){
+            console.log("10 초가 지났네?");
+        });
+    </script>
+</body>
+</html>

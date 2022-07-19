@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step07_for.html</title>
+</head>
+<body>
+    <script>
+        let names=["김구라", "해골", "원숭이"];
+
+        //배열에 저장된 모든 item 을 순서대로 참조해서 작업하는 기존의 방법
+        console.log("-- 기본 for 문 활용 --")
+        for(let i=0; i<names.length; i++){
+            let item=names[i];
+            console.log(item);
+        }
+        
+        console.log("-- for in 활용 --");
+        for(let i in names){ // i 에 인덱스가 자동으로 할당된다.
+            let item=names[i];
+            console.log(item);
+        }
+
+        console.log("-- 배열의 .forEach() 함수 활용 --");
+        names.forEach(function(item){
+            console.log(item);
+        });
+
+        console.log("-- ecma6 에서 추가된 for of 활용 --");
+        for(let item of names){
+            console.log(item);
+        }
+    </script>
+</body>
+</html>

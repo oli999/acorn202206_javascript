@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_object2.html</title>
+</head>
+<body>
+    <script>
+        let num=1;
+        let name="김구라";
+        let isMan=true;
+
+        let mem={num:num, name:name, isMan:isMan, sing:function(){}};
+        //위의 object 와 아래의 object 는 모양이 같다
+        let mem2={num, name, isMan, sing(){}};
+
+        //object 의 key 값으로 사용할 문자열을 변수에 대입하고
+        let a="num";
+        let b="name";
+        let c="isMan";
+        //object 의 key 값을 변수 안에 있는 값으로 결정할수 있다. 
+        let mem3={[a]:2, [b]:"해골", [c]:false};
+
+    </script>
+</body>
+</html>

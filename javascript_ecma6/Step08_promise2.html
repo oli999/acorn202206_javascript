@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step08_promise2.html</title>
+</head>
+<body>
+    <script>
+        //메뉴를 주문하는 함수라고 가정하자
+        function order(menu, callback){
+            //메뉴를 준비하는데 걸리는 시간이 랜덤하다고 가정하자
+            const delay=Math.random()*5000+5000; //5000 ~ 10000 사이의 랜덤한 숫자
+            setTimeout(function(){
+                console.log(menu+" 가 준비 되었습니다.");
+                callback(menu);
+            }, delay);
+        }
+
+        // Promise 객체를 생성하면서 함수 전달
+        new Promise(function(resolve){
+            //전달된 함수는 즉시 호출된다. 
+            //함수의 인자로 resolve function 이 전달되는데 해당 함수를 호출하면
+            order("커피", resolve);
+        }).then(function(item){
+            //커피가 준비 되었을때 하고 싶은 작업을 여기서 하면 된다.
+            console.log(item+" 맛나게 마셔요!");
+            //샌드위치를 주문하는 Promise 객체를 만들어서 리턴해준다.
+            return new Promise(function(resolve){
+                order("샌드위치", resolve);
+            });
+        }).then(function(item){
+            //샌드위치가 준비 되었을대 하고 싶은 작업을 여기서 하면 된다.
+            console.log(item+" 을 만나게 먹어요. 냠냠");
+            return new Promise(function(resolve){
+                order("아이스크림", resolve);
+            });
+        }).then(function(item){
+            console.log(item+" 을 후식으로 먹어요!");
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_varaible.html</title>
+</head>
+<body>
+    <script>
+        //예전에 변수를 선언하는 방식
+        var num=10;
+
+        //ecma6 부터 변수를 선언하는 방식
+        let num2=10;
+
+        if(true){
+            //myName 은 전역 변수 
+            var myName="김구라";
+            //yourName 은 if 문 블럭 안에서만 사용할수 있는 지역 변수 
+            let yourName="원숭이";
+        }
+
+        //값을 변경하지 못하도록 상수(constant)화 시키기
+        //값이 한번 결정되면 바꿀수 없다. 
+        const pi=3.14159;
+        
+    </script>
+</body>
+</html>

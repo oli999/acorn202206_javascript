@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_fetch.html</title>
+</head>
+<body>
+    <h1>친구목록 입니다.</h1>
+    <button id="moreBtn">더보기</button>
+    <ul id="friendList">
+        <li>강아지</li>
+        <li>고양이</li>
+    </ul>
+    <script>
+
+        document.querySelector("#moreBtn").addEventListener("click", function(){
+           
+            //서버에  friends.json 문서를 요청해서 받아온다.
+            fetch("friends.json")
+            .then(function(response){
+                //console.log(response);
+                return response.json();
+            }).then(function(data){
+                //data 는 친구 목록이 들어 있는 array 이다. 
+                console.log(data);
+                for(let item of data){
+                    let li=document.createElement("li");
+                    li.innerText=item;
+                    document.querySelector("#friendList").append(li);
+                }
+            });
+
+            console.log("요청함");
+        });
+    </script>
+</body>
+</html>

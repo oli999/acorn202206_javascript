@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_arrowFunction.html</title>
+</head>
+<body>
+    <script>
+
+        //익명의 함수를 만들어서 f1 이라는 변수에 대입하기 
+        let f1 = function(){};
+
+        //화살표 함수를 만들어서 f2 라는 변수에 대입하기
+        let f2 = ()=>{}; //arrow function
+
+        //두수의 합을 콘솔에 출력하는 함수 
+        let showSum = function(num1, num2){
+            let result=num1+num2;
+            console.log("두수의 합:"+result);
+        };
+        //두수의 합을 콘솔에 출력하는 함수를 arrow function 으로 만들기 
+        let showSum2 = (num1, num2)=>{
+            let result=num1+num2;
+            console.log("두수의 합:"+result);
+        };
+
+        //두수의 합을 리턴하는 함수 
+        let getSum = function(num1, num2){
+            return num1+num2;
+        };
+        //두수의 합을 리턴하는 화살표 함수 
+        let getSum2 = (num1, num2)=>{
+            
+            return num1+num2;
+        };
+        //람다함수(한줄짜리 함수)로 바꾸면
+        const getSum3 = (num1, num2) => num1+num2;
+
+        const a="kim";
+
+        const mem={name:"kim"};
+        //mem = { }; // 불가
+        //mem = 10; // 불가
+        //mem = "park"; //불가
+
+        mem.name="park"; //가능
+
+    </script>
+</body>
+</html>
